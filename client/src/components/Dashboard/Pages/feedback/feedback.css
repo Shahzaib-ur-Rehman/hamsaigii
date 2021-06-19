@@ -1,0 +1,17 @@
+.feedBack_main_div{
+    flex: 4;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(218, 236, 231) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feedBack_center_div{
+    width: 900px;
+    height: 500px;
+    margin-top: 70px !important;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

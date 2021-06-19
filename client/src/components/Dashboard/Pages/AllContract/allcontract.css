@@ -1,0 +1,85 @@
+.allContract_main_div{
+    flex: 4;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(218, 236, 231) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allContract_center_div{
+    width: 1000px;
+    min-height: 510px;
+    margin-top: 70px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.mycontract_card_div{
+    background-color:white;
+}
+.neighbor_card_div{
+    background-color: white;
+}
+.neighbor_card_body_div{
+    width: 300px !important;
+}
+
+.tabs_div{
+    width: 500x;
+    background-color: rgb(255, 255, 255) !important;
+}
+.tabList_div{
+    display: flex;
+    justify-content: space-around;
+    list-style: none !important;
+}
+.tabList_tab1_div{
+    width: 400px !important;
+    height: 50px !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center !important;
+    /* background-color: blueviolet !important; */
+}
+.tabList_tab1_div:hover{
+    background-color: #56ccc6;
+}
+.tabList_tab1_div:active{
+    background-color: rgb(54, 159, 201);
+}
+
+.tabList_tab2_div{
+    width: 400px !important;
+    height: 50px !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center !important;
+}
+.tabList_tab2_div:hover{
+    background-color: #56ccc6;
+}
+.tab_content_div{
+    margin-left: 50px !important;
+}
+
+.neighbourForm_div{
+    width: 400px !important;
+    height: 200px !important;
+    background-color: white !important;
+}
+
+/* #tableRowColor{
+     */
+/* } */
+
+.bg_primary{
+    background-color: #89cfef !important;
+}
+.bg_danger{
+    background-color: lightcoral !important;
+}
+.bg_success{
+    background-color: lightgreen !important;
+}

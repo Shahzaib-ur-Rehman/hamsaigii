@@ -1,0 +1,29 @@
+.mein_registerNeighbor_div{
+    flex: 4;
+    height: 100vh;
+    background-color: hsl(163, 32%, 89%);
+    display: flex;
+    align-items: center;
+}
+.registerNeighbor_div{
+    max-height: auto !important;
+    min-height: 500px !important;
+    width: 1000px !important;
+    background-color: rgb(250, 250, 250);
+    margin: auto;
+    margin-top: 70px !important;
+    border-radius: 10px !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.myForm h3{
+    text-transform: uppercase !important;
+}
+.bg_primary{
+    background-color: #89cfef !important;
+}
+.bg_danger{
+    background-color: lightcoral !important;
+}
+.bg_success{
+    background-color: lightgreen !important;
+}

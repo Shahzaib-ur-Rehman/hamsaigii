@@ -1,0 +1,12 @@
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+.coontainer{
+  display: flex;
+}
+
+.other{
+  flex:4;
+  /* background-color: hotpink; */
+}

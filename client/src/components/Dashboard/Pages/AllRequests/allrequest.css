@@ -1,0 +1,24 @@
+.allrequest_main_div{
+    flex: 4;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(218, 236, 231) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.allrequest_center_div{
+    width: 1000px;
+    min-height: 510px;
+    margin-top: 70px !important;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.requestcard_div{
+    width: 300px !important;
+    height: 200px !important;
+}
+.acceptDialog_div{
+    width: 300px !important;
+}

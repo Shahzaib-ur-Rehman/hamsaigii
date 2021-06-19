@@ -1,0 +1,51 @@
+.Home_div {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.Home_div{
+    width: 100vw !important;
+    height: 100vh !important;
+    /* background-color: rgb(158, 194, 182) !important; */
+}
+.navbar_div{
+    height: 10vh !important;
+}
+.home_text_div{
+    height: 90vh !important;
+    color: white !important; 
+    text-transform: uppercase;
+    font-size: 32px !important;
+    /* background-color: aquamarine !important; */
+}
+
+.animation_text{
+    animation: typing 5s steps(16);
+    animation-iteration-count: infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 10px;
+    margin-left: 10px !important;
+    border-right: 2px solid silver;
+    }
+
+    @keyframes typing {
+        0%{
+          width: 0ch;
+        }
+        100%{
+          width: 38ch;
+        }
+      }
