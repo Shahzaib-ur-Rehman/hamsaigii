@@ -154,7 +154,7 @@ const Sidebar = () => {
     <div className='sidebar'>
       <div className='sidebarWrapper'>
         <div className='sidebarMenu'>
-          <h3 className='sidebarTitle fw-bold text-black-50'>User</h3>
+          <h3 className='sidebarTitle fw-bold'>Neighbour Side</h3>
           <ul className='sidebarList'>
             <li
               className={`sidebarListItem`}

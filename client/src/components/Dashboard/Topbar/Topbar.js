@@ -1,10 +1,26 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React,{useState,useEffect} from "react";
+import { NavLink ,useHistory} from "react-router-dom";
 import './topbar.css'
 import FaceIcon from '@material-ui/icons/Face';
 import MessageIcon from '@material-ui/icons/Message';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import axios from 'axios';
+
 const Topbar = () => {
+    const [userName,setUserName]=useState();
+    const history =useHistory();
+    useEffect(() => {
+        axios.get('/api/users/loggedIn').then((response)=>{          
+            if(response.data.auth==false) {
+                history.push("/login")
+            }else{
+                setUserName(response.data.user[0].fullname);
+            }
+        }).catch((error)=>{
+                console.log(error);
+        })
+    }, [])
+    console.log(userName);
   return (
     <div>
         <div className='topbar'>
@@ -12,7 +28,7 @@ const Topbar = () => {
                 <div className='topLeft'>
                     <span className='logo'>Hamsaigii</span>
                 </div>
-                <h3 className='text-uppercase'>Neighbour Side </h3>
+                <h3 className='text-uppercase'>Hi <span>{userName}</span> </h3>
                 <div className='topRight'>
                     {/* <div className='topbarIconsDiv'>
                         <NotificationsIcon/>
