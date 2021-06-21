@@ -51,7 +51,7 @@ const Sidebar = () => {
     <div className='sidebar'>
       <div className='sidebarWrapper'>
         <div className='sidebarMenu'>
-          <h3 className='sidebarTitle'>Admin</h3>
+          <h3 className='sidebarTitle fw-bold'>Admin Side</h3>
           <ul className='sidebarList'>
             <li
               className='sidebarListItem '
