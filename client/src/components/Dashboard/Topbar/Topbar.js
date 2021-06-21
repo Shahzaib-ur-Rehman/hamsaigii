@@ -12,6 +12,7 @@ const Topbar = () => {
                 <div className='topLeft'>
                     <span className='logo'>Hamsaigii</span>
                 </div>
+                <h3 className='text-uppercase'>Neighbour Side </h3>
                 <div className='topRight'>
                     {/* <div className='topbarIconsDiv'>
                         <NotificationsIcon/>
