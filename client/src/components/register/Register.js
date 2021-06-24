@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, NavLink } from "react-router-dom";
+import TextField from '@material-ui/core/TextField';
 import "../../styles/Form.css";
 import axios from "axios";
 const Register = () => {
@@ -26,10 +27,11 @@ const Register = () => {
   const registerNeighbour = async (e) => {
     e.preventDefault();
     const { fullname, email, phone, society, password, address } = inputData;
-
+    let correct_way_email=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let name_correct_way=/^[A-Za-z]+$/;
     if (!fullname || !email || !phone || !society || !password || !address) {
       window.alert("Plz Fill all Fields");
-    } else {
+    } else if( fullname.match(name_correct_way) && email.match(correct_way_email) && phone.length==11) {
       const response = await fetch("/api/users/signup", {
         method: "POST",
         headers: {
@@ -50,6 +52,9 @@ const Register = () => {
       }else{
         history.push('/dashboard');
       }
+    }
+    else{
+      alert("Plz Enter Proper Values ");
     }
   };
 
@@ -78,18 +83,21 @@ const Register = () => {
                 Register
               </h2>
               <form method='POST'>
-                <label htmlFor='fullname'>Full Name</label>
+              <label htmlFor='fullname'>Full Name</label>
                 <input
                   type='text'
                   value={inputData.fullname}
                   onChange={handleInputs}
-                  className='form-control mb-2'
-                  name='fullname'></input>
+                  label="Full Name"
+                  required
+                  className='form-control ml-3'
+                  name='fullname'/>
                 <label htmlFor='email'>Email</label>
                 <input
                   type='email'
                   value={inputData.email}
                   onChange={handleInputs}
+                  required
                   className='form-control mb-2'
                   name='email'></input>
                 <label htmlFor='phone'>Contact No</label>
@@ -97,6 +105,7 @@ const Register = () => {
                   type='number'
                   value={inputData.phone}
                   onChange={handleInputs}
+                  required
                   className='form-control mb-2'
                   name='phone'></input>
                 <label htmlFor='inputState' className='form-label'>
@@ -121,6 +130,7 @@ const Register = () => {
                   type='password'
                   value={inputData.password}
                   onChange={handleInputs}
+                  required
                   className='form-control mb-2'
                   name='password'></input>
                 <label htmlFor='formGroupExampleInput' className='form-label'>

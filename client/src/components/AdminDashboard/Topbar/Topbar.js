@@ -1,10 +1,7 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import { useHistory } from "react-router-dom";
 import './topbar.css'
 import axios from 'axios';
-import FaceIcon from '@material-ui/icons/Face';
-import MessageIcon from '@material-ui/icons/Message';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 const Topbar = () => {
     const [userName,setUserName]=useState();
     const history =useHistory();
