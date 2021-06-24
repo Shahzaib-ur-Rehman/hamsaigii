@@ -249,6 +249,28 @@ const Sidebar = () => {
                 Rejected Contracts
               </NavLink>
             </li>
+            <li className='sidebarListItem'  style={{ backgroundColor: rejectedContractColor }}>
+              <TrackChangesIcon className='sidebarIcons' />
+              <NavLink
+                to='/dashboard/rejectedContracts'
+                className='sidebar_navlink'
+                onClick={() => {
+                  changeColor(8);
+                }}>
+                Send Invitations
+              </NavLink>
+            </li>
+            <li className='sidebarListItem'  style={{ backgroundColor: rejectedContractColor }}>
+              <TrackChangesIcon className='sidebarIcons' />
+              <NavLink
+                to='/dashboard/rejectedContracts'
+                className='sidebar_navlink'
+                onClick={() => {
+                  changeColor(8);
+                }}>
+                All Invitations
+              </NavLink>
+            </li>
             <li className='sidebarListItem' style={{ backgroundColor: feedBackColor }}>
               <FeedbackIcon className='sidebarIcons' />
               <NavLink

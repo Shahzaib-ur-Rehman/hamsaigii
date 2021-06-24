@@ -1,6 +1,6 @@
 .sidebar{
     flex: 1;
-    height: 100vh;
+    height: 120vh;
     background-color: rgb(255, 255, 255);
     position: sticky !important;
     top:50px;
@@ -16,6 +16,7 @@
 }
 .sidebarMenu{
     margin-bottom: 10px;
+
 }
 .sidebarTitle{
     font-size: 13px;

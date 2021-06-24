@@ -31,30 +31,40 @@ const Register = () => {
     let name_correct_way=/^[A-Za-z]+$/;
     if (!fullname || !email || !phone || !society || !password || !address) {
       window.alert("Plz Fill all Fields");
-    } else if( fullname.match(name_correct_way) && email.match(correct_way_email) && phone.length==11) {
-      const response = await fetch("/api/users/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullname,
-          email,
-          phone,
-          society,
-          password,
-          address,
-        }),
-      });
-      console.log(response.status);
-      if (response.status==400) {
-        window.alert('User Already Exist ')
+    } else if( fullname.match(name_correct_way)) {
+      if(email.match(correct_way_email)){
+          if(phone.length==11){
+            const response = await fetch("/api/users/signup", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                fullname,
+                email,
+                phone,
+                society,
+                password,
+                address,
+              }),
+            });
+            console.log(response.status);
+            if (response.status==400) {
+              window.alert('User Already Exist ')
+            }else{
+              history.push('/dashboard');
+            }
+          }else
+          {
+            window.alert("Phone No Must be 11 Numbers")
+          }
       }else{
-        history.push('/dashboard');
+        window.alert("Enter Email Properly")
       }
+        
     }
     else{
-      alert("Plz Enter Proper Values ");
+      alert("Full Name cannot contain special charactors and numberics");
     }
   };
 
@@ -92,6 +102,7 @@ const Register = () => {
                   required
                   className='form-control ml-3'
                   name='fullname'/>
+                  <small className='text-danger'></small>
                 <label htmlFor='email'>Email</label>
                 <input
                   type='email'
@@ -100,6 +111,7 @@ const Register = () => {
                   required
                   className='form-control mb-2'
                   name='email'></input>
+                  <small className='text-danger'></small>
                 <label htmlFor='phone'>Contact No</label>
                 <input
                   type='number'
