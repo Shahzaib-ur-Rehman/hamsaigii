@@ -8,6 +8,8 @@ import TrackChangesIcon from "@material-ui/icons/TrackChanges";
 import BallotIcon from "@material-ui/icons/Ballot";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import PostAddIcon from "@material-ui/icons/PostAdd";
+import InsertInvitationIcon from '@material-ui/icons/InsertInvitation';
+import ViewCompactIcon from '@material-ui/icons/ViewCompact';
 import axios from "axios";
 import "./sidebar.css";
 import { NavLink } from "react-router-dom";
@@ -23,6 +25,8 @@ const Sidebar = () => {
   const [rejectedContractColor, setrejectedContractColor] = useState("");
   const [feedBackColor, setfeedBackColor] = useState("");
   const [logoutColor, setlogoutColor] = useState("");
+  const [invitationColor,setInvitationColor]=useState("");
+  const [allinvitationColor,setAllInvitationColor]=useState("");
   const history = useHistory();
   const logoutuser = () => {
     axios
@@ -48,6 +52,8 @@ const Sidebar = () => {
       setrejectedContractColor("White");
       setfeedBackColor("White");
       setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
     } else if (id == 2) {
       sethomeBgColor("White");
       setProfilelColor("#70a19e");
@@ -59,6 +65,8 @@ const Sidebar = () => {
       setrejectedContractColor("White");
       setfeedBackColor("White");
       setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
     } else if (id == 3) {
       sethomeBgColor("White");
       setProfilelColor("White");
@@ -70,6 +78,8 @@ const Sidebar = () => {
       setrejectedContractColor("White");
       setfeedBackColor("White");
       setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
     } else if (id == 4) {
       sethomeBgColor("White");
       setProfilelColor("White");
@@ -81,6 +91,8 @@ const Sidebar = () => {
       setrejectedContractColor("White");
       setfeedBackColor("White");
       setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
     } else if (id == 5) {
       sethomeBgColor("White");
       setProfilelColor("White");
@@ -92,6 +104,8 @@ const Sidebar = () => {
       setrejectedContractColor("White");
       setfeedBackColor("White");
       setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
     } else if (id == 6) {
       sethomeBgColor("White");
       setProfilelColor("White");
@@ -103,6 +117,8 @@ const Sidebar = () => {
       setrejectedContractColor("White");
       setfeedBackColor("White");
       setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
     } else if (id == 7) {
       sethomeBgColor("White");
       setProfilelColor("White");
@@ -114,6 +130,8 @@ const Sidebar = () => {
       setrejectedContractColor("White");
       setfeedBackColor("White");
       setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
     } else if (id == 8) {
       sethomeBgColor("White");
       setProfilelColor("White");
@@ -125,6 +143,8 @@ const Sidebar = () => {
       setrejectedContractColor("#70a19e");
       setfeedBackColor("White");
       setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
     } else if (id == 9) {
       sethomeBgColor("White");
       setProfilelColor("White");
@@ -134,8 +154,10 @@ const Sidebar = () => {
       setnotificationColor("White");
       settrackContractColor("White");
       setrejectedContractColor("White");
-      setfeedBackColor("#70a19e");
+      setfeedBackColor("White");
       setlogoutColor("White");
+      setInvitationColor("#70a19e");
+      setAllInvitationColor("White");
     } else if (id == 10) {
       sethomeBgColor("White");
       setProfilelColor("White");
@@ -146,7 +168,38 @@ const Sidebar = () => {
       settrackContractColor("White");
       setrejectedContractColor("White");
       setfeedBackColor("White");
+      setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("#70a19e");
+    }
+    else if(id==11){
+      sethomeBgColor("White");
+      setProfilelColor("White");
+      setAddRequestColor("White");
+      setAllRequestColor("White");
+      setmyRequestColor("White");
+      setnotificationColor("White");
+      settrackContractColor("White");
+      setrejectedContractColor("White");
+      setfeedBackColor("#70a19e");
+      setlogoutColor("White");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
+
+    }else if(id==12){
+      sethomeBgColor("White");
+      setProfilelColor("White");
+      setAddRequestColor("White");
+      setAllRequestColor("White");
+      setmyRequestColor("White");
+      setnotificationColor("White");
+      settrackContractColor("White");
+      setrejectedContractColor("White");
+      setfeedBackColor("White");
       setlogoutColor("#70a19e");
+      setInvitationColor("White");
+      setAllInvitationColor("White");
+
     }
   };
 
@@ -249,25 +302,27 @@ const Sidebar = () => {
                 Rejected Contracts
               </NavLink>
             </li>
-            <li className='sidebarListItem'  style={{ backgroundColor: rejectedContractColor }}>
-              <TrackChangesIcon className='sidebarIcons' />
+            <li className='sidebarListItem'  style={{ backgroundColor: invitationColor }}>
+              <InsertInvitationIcon className='sidebarIcons' />
               <NavLink
-                to='/dashboard/rejectedContracts'
+                to='/dashboard/sendInvitation'
                 className='sidebar_navlink'
                 onClick={() => {
-                  changeColor(8);
-                }}>
+                  changeColor(9);
+                }}
+                >
                 Send Invitations
               </NavLink>
             </li>
-            <li className='sidebarListItem'  style={{ backgroundColor: rejectedContractColor }}>
-              <TrackChangesIcon className='sidebarIcons' />
+            <li className='sidebarListItem'  style={{ backgroundColor: allinvitationColor }}>
+              <ViewCompactIcon className='sidebarIcons' />
               <NavLink
-                to='/dashboard/rejectedContracts'
+                to='/dashboard/allInvitation'
                 className='sidebar_navlink'
                 onClick={() => {
-                  changeColor(8);
-                }}>
+                  changeColor(10);
+                }}
+                >
                 All Invitations
               </NavLink>
             </li>
@@ -277,7 +332,7 @@ const Sidebar = () => {
                 to='/dashboard/feedBack'
                 className='sidebar_navlink'
                 onClick={() => {
-                  changeColor(9);
+                  changeColor(11);
                 }}>
                 Feed Back & Complain
               </NavLink>
@@ -286,7 +341,7 @@ const Sidebar = () => {
             <li
               className='sidebarListItem'
               onClick={() => {
-                changeColor(10);
+                changeColor(12);
               }} style={{ backgroundColor: logoutColor }}>
               <PowerSettingsNewIcon className='sidebarIcons' />
               <a

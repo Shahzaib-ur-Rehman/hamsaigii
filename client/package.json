@@ -14,6 +14,8 @@
     "date-fns": "^2.22.1",
     "date-format": "^3.0.0",
     "formik": "^2.2.9",
+    "jquery": "^3.6.0",
+    "multiselect-react-dropdown": "^2.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-modal": "^3.14.2",

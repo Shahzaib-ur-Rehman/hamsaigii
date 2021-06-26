@@ -13,6 +13,8 @@ import RejectedContracts from "./Pages/RejectedContracts/RejectedContracts";
 import Profle from "./Pages/Profile/Profle";
 import AllRequest from "./Pages/AllRequests/AllRequest";
 import MyRequest from "./Pages/MyRequests/MyRequest";
+import SendInvitation from "./Pages/SendInvitations/SendInvitation";
+import Allinvitations from "./Pages/AllInvitations/Allinvitations";
 const Dashboard = () => {
   return (
       <Router>
@@ -29,6 +31,8 @@ const Dashboard = () => {
                 <Route exact path='/dashboard/getmyrequest' component={MyRequest}></Route>
                 <Route exact path='/dashboard/allContracts' component={AllContracts}></Route>
                 <Route exact path='/dashboard/rejectedContracts' component={RejectedContracts}></Route>
+                <Route exact path='/dashboard/sendInvitation' component={SendInvitation}></Route>
+                <Route exact path='/dashboard/allInvitation' component={Allinvitations}></Route>
                 <Route exact path='/dashboard/feedBack' component={FeedBack}></Route>
                 <Route exact path='/dashboard/logout' component={Logout}></Route>
             </Switch>
